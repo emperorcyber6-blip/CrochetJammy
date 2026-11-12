@@ -1,0 +1,6 @@
+{
+  "name": "Jammy Handmade - Bespoke Crochet Couture",
+  "description": "Luxury handcrafted crochet couture, bespoke occasion gowns, artisan bags, and custom orders with direct WhatsApp checkout.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
