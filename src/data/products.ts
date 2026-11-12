@@ -1,5 +1,12 @@
 import { Product, DeliveryOption } from '../types';
 
+const assetUrl = (p: string) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
+  const cleanPath = p.startsWith('/') ? p.slice(1) : p;
+  return `${cleanBase}${cleanPath}`;
+};
+
 export const PRODUCTS: Product[] = [
   {
     id: 'sunburst_maxi',
@@ -8,8 +15,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Couture Maxi Gown',
     priceUGX: 450000,
     priceUSD: 120,
-    image: '/assets/products/sunburst_maxi.png',
-    originalImage: '/assets/aistudio/Screenshot__68__9b173c0b.png',
+    image: assetUrl('/assets/products/sunburst_maxi.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__68__9b173c0b.png'),
     shortDescription: 'Signature sunshine-gold handmade crochet column maxi featuring a square-cut neckline and an asymmetric cascading spiral ruffle slit.',
     craftDetails: [
       '42 hours of master artisan hand-stitching',
@@ -35,8 +42,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Couture Mini Dress',
     priceUGX: 320000,
     priceUSD: 85,
-    image: '/assets/products/sapphire_ruffle_mini.png',
-    originalImage: '/assets/aistudio/Screenshot__69__c7eefe9d.png',
+    image: assetUrl('/assets/products/sapphire_ruffle_mini.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__69__c7eefe9d.png'),
     shortDescription: 'Vibrant royal sapphire sleeveless high-neck cocktail dress sculpted with high-density ribbed stitches and an architectural multilayer ruffled flounce hem.',
     craftDetails: [
       '30 hours of meticulous hand-crochet construction',
@@ -62,8 +69,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Red Carpet Couture Gown',
     priceUGX: 650000,
     priceUSD: 175,
-    image: '/assets/products/crimson_mermaid_gown.png',
-    originalImage: '/assets/aistudio/Screenshot__70__664af8e8.png',
+    image: assetUrl('/assets/products/crimson_mermaid_gown.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__70__664af8e8.png'),
     shortDescription: 'Show-stopping red carpet mermaid gown in rich crimson, sculpted with a plunge sweetheart corset neckline, semi-sheer fishnet mid-thigh accent, and sweeping bow-draped stoles.',
     craftDetails: [
       '55 hours of artisanal crochet & structural framing',
@@ -89,8 +96,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Couture Trumpet Gown',
     priceUGX: 520000,
     priceUSD: 140,
-    image: '/assets/products/mocha_trumpet_gown.png',
-    originalImage: '/assets/aistudio/Screenshot__71__a65b10de.png',
+    image: assetUrl('/assets/products/mocha_trumpet_gown.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__71__a65b10de.png'),
     shortDescription: 'Decadent chocolate mocha long-sleeve evening gown with high jewel neck, contrasting ivory tiered ruffle cuffs, and a dramatic four-tier trumpet skirt.',
     craftDetails: [
       '48 hours of artisanal double-crochet stitchwork',
@@ -115,8 +122,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Sculpted Cocktail Dress',
     priceUGX: 480000,
     priceUSD: 130,
-    image: '/assets/products/cobalt_rosette_couture.png',
-    originalImage: '/assets/aistudio/Screenshot__72__fe93d06d.png',
+    image: assetUrl('/assets/products/cobalt_rosette_couture.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__72__fe93d06d.png'),
     shortDescription: 'Strapless sweetheart mini dress lavishly encrusted with dozens of individual 3D hand-sculpted crochet roses and shimmering beaded tassel waterfalls.',
     craftDetails: [
       'Over 60 individual hand-formed crochet blooming roses',
@@ -142,8 +149,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Sculptural Bodycon Mini',
     priceUGX: 420000,
     priceUSD: 115,
-    image: '/assets/products/obsidian_rosette_gown.png',
-    originalImage: '/assets/aistudio/Screenshot__73__093d917f.png',
+    image: assetUrl('/assets/products/obsidian_rosette_gown.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__73__093d917f.png'),
     shortDescription: 'All-black high-neck bodycon silhouette crowned with a dramatic giant 3D rosette over the shoulder, rosette-embellished sleeves, and sculpted floral hemline.',
     craftDetails: [
       'Dramatic oversized statement crochet rose on shoulder/chest',
@@ -168,8 +175,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Sweetheart Skater Mini',
     priceUGX: 340000,
     priceUSD: 90,
-    image: '/assets/products/amethyst_skater_mini.png',
-    originalImage: '/assets/aistudio/Screenshot__74__dc614716.png',
+    image: assetUrl('/assets/products/amethyst_skater_mini.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__74__dc614716.png'),
     shortDescription: 'Regal purple skater dress with delicate rosette appliqués on the wide straps, a ruffled sweetheart décolletage, and a high-volume pleated skater skirt.',
     craftDetails: [
       '32 hours of precision crochet craftsmanship',
@@ -194,8 +201,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Haute Couture Bridal / Gala Gown',
     priceUGX: 680000,
     priceUSD: 180,
-    image: '/assets/products/pearl_rose_capelet_gown.png',
-    originalImage: '/assets/aistudio/Screenshot__75__4b87e87c.png',
+    image: assetUrl('/assets/products/pearl_rose_capelet_gown.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__75__4b87e87c.png'),
     shortDescription: 'Pure ivory pearl crochet mermaid silhouette crowned with an opulent off-the-shoulder sculptural capelet made of vivid crimson hand-crocheted roses.',
     craftDetails: [
       '58 hours of haute couture handwork',
@@ -220,8 +227,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Resort & Gala Mermaid Gown',
     priceUGX: 490000,
     priceUSD: 130,
-    image: '/assets/products/cloud_white_mermaid_gown.png',
-    originalImage: '/assets/aistudio/Screenshot__76__-_Copy_ff60cec2.png',
+    image: assetUrl('/assets/products/cloud_white_mermaid_gown.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__76__-_Copy_ff60cec2.png'),
     shortDescription: 'Ethereal all-white textured crochet mermaid gown featuring voluminous ruffled off-shoulder collar, tailored hourglass torso, and sweeping fishtail hem.',
     craftDetails: [
       '44 hours of delicate textured stitchwork',
@@ -246,8 +253,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Tailored Chic Mini',
     priceUGX: 310000,
     priceUSD: 85,
-    image: '/assets/products/cobalt_tailored_keyhole.png',
-    originalImage: '/assets/aistudio/Screenshot__77__b3bcc246.png',
+    image: assetUrl('/assets/products/cobalt_tailored_keyhole.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__77__b3bcc246.png'),
     shortDescription: 'Architectural cobalt blue structured mini dress featuring a tasteful teardrop keyhole neckline, puff cap sleeves, and structured decorative hip pocket flaps.',
     craftDetails: [
       'Tailored blazer-inspired silhouette crafted completely by crochet hook',
@@ -272,8 +279,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Artisan Statement Handbag',
     priceUGX: 180000,
     priceUSD: 50,
-    image: '/assets/products/crimson_velvet_bag.png',
-    originalImage: '/assets/aistudio/Screenshot__66__bd97aa2f.png',
+    image: assetUrl('/assets/products/crimson_velvet_bag.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__66__bd97aa2f.png'),
     shortDescription: 'Masterpiece top-handle handbag combining plush crimson velvet yarn flap with cream woven base, solid polished gold hardware clasp, chain accent, and handmade flower tassel.',
     craftDetails: [
       'Woven double-density bottom structure that stands upright',
@@ -299,8 +306,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Artisan Structured Backpack',
     priceUGX: 195000,
     priceUSD: 55,
-    image: '/assets/products/granny_square_backpack.png',
-    originalImage: '/assets/aistudio/Screenshot__67__144970a5.png',
+    image: assetUrl('/assets/products/granny_square_backpack.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__67__144970a5.png'),
     shortDescription: 'Contemporary luxury backpack assembled from iconic artisan granny squares in moss olive, cream, and deep black with reinforced piping and secure buckle flap.',
     craftDetails: [
       'Individually hand-crocheted geometric floral motif squares',
@@ -325,8 +332,8 @@ export const PRODUCTS: Product[] = [
     categoryLabel: 'Bespoke Children Couture Set',
     priceUGX: 260000,
     priceUSD: 70,
-    image: '/assets/products/amys_kids_duo_set.png',
-    originalImage: '/assets/aistudio/Screenshot__78__a0258ad6.png',
+    image: assetUrl('/assets/products/amys_kids_duo_set.png'),
+    originalImage: assetUrl('/assets/aistudio/Screenshot__78__a0258ad6.png'),
     shortDescription: "Signature matching brother & sister luxury occasion set in regal purple and white stripes: tailored polo shirt & trousers + ruffled tiered floral dress with mini matching handbag.",
     craftDetails: [
       'Hypoallergenic, ultra-gentle baby-soft acrylic & bamboo yarn blend',
