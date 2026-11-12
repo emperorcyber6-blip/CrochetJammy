@@ -29,30 +29,6 @@ export const Header: React.FC<HeaderProps> = ({
 
   return (
     <header className="sticky top-0 z-40 bg-[#0A0A0A]/95 backdrop-blur-md text-neutral-100">
-      {/* Top subtle luxury announcement bar */}
-      <div className="bg-[#141414] border-b border-[#262626] py-1.5 px-4 text-center">
-        <div className="max-w-7xl mx-auto flex items-center justify-between text-xs text-[#E5C158]">
-          <span className="hidden sm:inline font-sans text-[11px] tracking-wide text-neutral-400">
-            Artisanal Slow Fashion · Handcrafted in Kampala, Uganda
-          </span>
-          <div className="flex items-center justify-center gap-4 w-full sm:w-auto text-[11px]">
-            <span className="text-neutral-300">
-              Worldwide Express Shipping Available via DHL
-            </span>
-            <span className="text-neutral-600 hidden md:inline">·</span>
-            <a
-              href={`https://wa.me/${cleanPhone}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1 text-[#F3E5AB] hover:text-[#D4AF37] transition-colors"
-            >
-              <MessageCircle className="w-3 h-3 text-[#25D366]" />
-              <span>WhatsApp Direct: {CONTACT_INFO.primaryWhatsApp}</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 gap-4">
