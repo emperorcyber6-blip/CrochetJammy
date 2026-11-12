@@ -6,7 +6,7 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     // Relative base ensures asset links work on GitHub Pages subpaths (e.g. /<repo>/)
-    base: './',
+    base: './CrochetJammy/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
